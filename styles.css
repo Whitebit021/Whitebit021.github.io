@@ -1,0 +1,303 @@
+/*Variables*/
+:root {
+    --color-fondo: #e5e5e519; 
+    --color-principal: rgb(139, 0, 0); 
+    --color-secundario: rgb(255, 255, 255);
+}   
+
+
+
+/*Etiquetas semánticas*/
+
+.main-container {
+    overflow: hidden;
+}
+
+video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+main, footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto ;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    width: 80%;
+}
+
+footer {
+    margin: 0.5% auto;
+    background-color: white;
+    border-radius: 300px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    flex-direction: column;
+    align-content: center;
+    height: 5%; 
+    padding: 2%;
+    
+}
+/*Parte del footer*/
+.cont-redes-sociales {
+    display: flex;
+    justify-content:center; 
+}
+
+.cont-redes-sociales  a img {
+    margin-right: 1rem; 
+}
+
+/*Sección cifrar - descifrar*/
+.sect-cifrar-descifrar {
+    display: flex; 
+    flex-direction: column;
+    width: 60%;
+    padding:2%;
+}
+
+.img-alura {
+    height: auto;
+    width: 6%;
+}
+
+#frm-cifrar {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.txt-cifrar-descifrar{
+    background-color: var(--color-fondo);
+    color: white;
+    font-size: 2rem; 
+    margin-bottom: 1.5rem;
+    width: 100%; 
+    height: 28vh;
+    max-width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.txt-cifrar-descifrar::placeholder{
+    color: white;
+}
+
+.mensaje-error {
+    display: none;
+} 
+
+.advertencia { 
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom:0.5rem;
+    color: red;
+}
+
+.advertencia > img {
+    margin-right: 0.5rem;
+}
+
+.btns-cifrar {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+
+.btn-cifrar {
+    background: #046779;
+    border-radius: 24px;
+    border: 1px solid black; 
+    color: var(--color-secundario);
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;   
+}
+
+.btn-cifrar:hover {
+    background-color: red;
+    color: var(--color-secundario);
+    border-color: var(--color-principal);
+   /* font-size: 1.3rem; */
+   transform: scale(1.1);
+}
+
+.btn-cifrar:active {
+    background-color: black;
+}
+
+.btn-descifrar {
+    background: var(--color-fondo);
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;   
+}
+
+.btn-descifrar:hover {
+    background-color: rgb(31, 190, 31);
+    color: var(--color-secundario);
+   /* font-size: 1.3rem; */
+   transform: scale(1.1);
+}
+
+.btn-descifrar:active {
+    background-color: black;
+}
+
+/*Sección mensaje descifrar*/
+.sect-msj-cifrar {
+    align-items: center;
+    align-content: center;
+    background-color: var(--color-secundario);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2%;
+    text-align: center;
+    width: 40%;
+}
+
+.img-ningun-mensaje {
+    width: 85%;
+    height:auto;
+}
+
+.mensaje {
+    width: 100%;
+    font-size: 1.5rem;
+    color: gray; 
+    overflow:hidden;
+}
+
+.flex-column { 
+    justify-content: center;
+    align-content: space-between;
+}
+
+.btn-copiar {
+    background: var(--color-fondo);
+    border: 1px solid var(--color-principal);
+    border-radius: 24px;
+    color: var(--color-principal);
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;  
+}
+
+.btn-copiar:hover {
+    background-color: rgb(31, 190, 31);
+    color: var(--color-secundario);
+   /* font-size: 1.3rem; */
+   transform: scale(1.1);
+}
+
+.btn-copiar:active {
+    background-color: black;
+}
+/*Media Queries*/
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+    main, footer {
+        width: 90%;
+    }
+    footer {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .sect-cifrar-descifrar {
+        width: 100%;
+        padding:2%;
+    }
+
+    .sect-msj-cifrar {
+        flex-direction: column;
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .img-ningun-mensaje {
+        width: 45%;
+        height:auto;
+    }
+
+    .btn-copiar {
+        width:45%;
+        transition: 0.5s;  
+    }
+    
+}
+
+/*Celulares*/
+@media screen and (max-width: 375px) {
+
+    main, footer {
+        width: 95%;
+    }
+
+    footer { 
+        border: 1px solid var(--color-principal);
+        color: black;
+    }
+
+    .sect-cifrar-descifrar {
+        width: 100%;
+        padding:2%;
+    }
+
+    #frm-cifrar {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sect-msj-cifrar {
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-copiar {
+        width:45%;
+        transition: 0.5s;  
+    }
+
+    .btns-cifrar {
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    .btn-cifrar, .btn-descifrar  {
+        width: 100%;
+        transition: 0.5s;   
+    }
+}

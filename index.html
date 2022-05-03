@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Texto</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- main conteiner (Contenido principal)-->
+     <div class="main-container">
+
+        <section>
+            <video src="Video/Naturaleza.mp4" autoplay="true" muted="true" loop="true"></video>
+        </section>
+
+        </section>
+    <main>      
+        <section class="sect-cifrar-descifrar">
+            <header id="header">
+                <img class="img-alura" src="Imagenes/logo_alura.svg" alt="logo alura">
+            </header>
+            <form id="frm-cifrar">
+                
+                <textarea id="entrada" class="txt-cifrar-descifrar" placeholder="Ingrese el texto aquí" autofocus></textarea>
+                
+
+                <div class="advertencia">
+                    <small><img src="Imagenes/warning.png" alt="imagen de advertencia"> Solo letras minúsculas y sin acentos</small>
+                </div>
+               
+                <fieldset class="btns-cifrar">
+                    <button class="btn-cifrar">Encriptar</button>
+                    <button class="btn-descifrar">Desencriptar</button> 
+                </fieldset>
+                
+            </form>
+        </section>
+
+        <section class="sect-msj-cifrar" id="msj">
+            <img src="Imagenes/ningun-mensaje.svg" alt="Imagen ningun mensaje encontrado" class="img-ningun-mensaje">
+            <h2 class="msj-ningun-mensaje">Ningún mensaje fue encontrado</h2>
+            <p class="p-ningun-mensaje">Ingresa el texto que deseas encriptar o desencriptar</p>
+        </section>        
+
+    </main>
+
+    <footer>    
+        <small>Desarrollado por Jose Fernando Lancheros Prieto 2022</small>
+        <div class="cont-redes-sociales">
+            <a href="https://www.linkedin.com/in/fernando-lancheros/" target="_blank"> <img src="Imagenes/linkedin.png" alt="imagen LinkedIn"></a>
+            <a href="https://github.com/Whitebit021" target="_blank" > <img src="Imagenes/github.png" alt="imagen github"></a>
+        </div>
+    </footer>
+
+   
+    <script src="script_first.js"></script>
+</body>
+</html>
